@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'AG Futura';
+  src: url('/fonts/AG_Futura.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer theme {
+/* отступы, типографика, цвета темы */
+  @theme {
+    /* --font-display:'AG Futura', sans-serif; */
+    --color-background:#fff;
+    --color-primary: #000;
+    --color-dark: #191A23;
+    --color-accent: #F3F3F3;
+    --color-green: #B9FF66;
+    --color-foregruund: #fff;
+    --radius-button: 0.875rem;
+    --radius-card: 45px;
+  }
+  :root {
+  --font-ag: 'AG Futura', sans-serif;
+}
+}
+
+@layer base {
+/*  Слой для сброса стилей (Reset/Normalize) и задания базовых правил для стандартных HTML-тегов */
+
+
+
+  /* Расширяем базовый сброс для всех элементов */
+  *,
+  *::before,
+  *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  /* Инпуты, кнопки и текстовые области */
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+    background: transparent; /* Убирает дефолтный фон в некоторых браузерах */
+  }
+  button:hover {
+    transition: 0.3s easy;
+  }
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  /* Ссылки (с добавлением вашего плавного перехода) */
+  a,
+  a:visited,
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Списки и изображения */
+  ul li {
+    list-style-type: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  /* Заголовки */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit; /* Чтобы стилизовать исключительно утилитами text-* */
+    font-weight: 500;
+  }
+
+  /* Отступы между абзацами (ваш специфический паттерн) */
+  p + p {
+    margin-top: 1em;
+  }
+
+  /* Кастомный фокус (Tailwind по умолчанию делает красивое кольцо, 
+     но если вам нужно строго убрать outline, раскомментируйте ниже) */
+  /*
+  :focus, :active, a:focus, a:active {
+    outline: none;
+  }
+  */
+}
+
+@layer components {
+/* кнопки, повторяющиеся элементы */
+}
+
+ @layer utilities {
+.my-container{
+  @apply w-full max-w-[1240px] mx-auto 
+};
+
+/* Слой для ваших собственных утилитарных (однозадачных) классов, которых нет в Tailwind из коробки. Утилиты имеют самый высокий приоритет и перекрывают стили из base и components. */
+.mark {
+  @apply bg-green text-black px-1.5 rounded-[7px];
+};
+.mark-accent {
+  @apply bg-accent
+};
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+      filter: blur(0px);
+    }
+  }
+@keyframes marquee {
+  0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%); /* Сдвигаем ровно на половину (длину одного массива) */
+    }
+}
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 45s linear infinite;
+  }
+
+
+  /* Создаем удобный класс, который можно комбинировать с другими */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out both;
+  }
+  .animation-delay-200{
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400{
+    animation-delay: 0.4s;
+  }
+  .animation-delay-600{
+    animation-delay: 0.6s;
+  }
+}
