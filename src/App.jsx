@@ -4,8 +4,10 @@ import Declaration from './assets/sections/Declaration'
 import Band from './assets/sections/Band.jsx'
 import Services from './assets/sections/Services.jsx'
 import Happen from'./assets/sections/Happen.jsx'
-
+import Case from'./assets/sections/Cases.jsx'
+import WorkingProcess from './assets/sections/WorkingProcess.jsx'
 import './App.css'
+import Team from './assets/sections/Team.jsx'
 
 
 function App() {
@@ -20,6 +22,9 @@ function App() {
         <Band/>
         <Services/>
         <Happen/>
+        <Case/>
+        <WorkingProcess/>
+        <Team/>
       </main>
     </div>
     
