@@ -3,6 +3,7 @@ import Navbar from './assets/sections/Navbar'
 import Declaration from './assets/sections/Declaration'
 import Band from './assets/sections/Band.jsx'
 import Services from './assets/sections/Services.jsx'
+import Happen from'./assets/sections/Happen.jsx'
 
 import './App.css'
 
@@ -18,6 +19,7 @@ function App() {
         <Declaration/>
         <Band/>
         <Services/>
+        <Happen/>
       </main>
     </div>
     
