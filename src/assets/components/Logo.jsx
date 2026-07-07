@@ -3,7 +3,7 @@
    export function LogoIcon() {
     return (
         <div >
-            <img src= { logoSvg } alt="logo" />
+            <img className='mob:w-[80%] sm:w-full'  src= { logoSvg } alt="logo" />
         </div>
         
     )

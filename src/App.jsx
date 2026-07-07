@@ -8,7 +8,7 @@ import Case from'./assets/sections/Cases.jsx'
 import WorkingProcess from './assets/sections/WorkingProcess.jsx'
 import './App.css'
 import Team from './assets/sections/Team.jsx'
-
+import Testimonials from './assets/sections/Testimonials.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +25,7 @@ function App() {
         <Case/>
         <WorkingProcess/>
         <Team/>
+        <Testimonials/>
       </main>
     </div>
     

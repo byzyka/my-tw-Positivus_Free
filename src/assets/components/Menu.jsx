@@ -25,7 +25,7 @@ const navLinks = [
 ];
 
 export function MenuNav() {
-    return <nav className="flex items-center gap-5  ">
+    return <nav className="hidden lg:flex items-center gap-5  ">
         {navLinks.map((link, index)=> (<a key={link.href} className="p-5 text-xl leading-7 text-primary rounded-[0.875rem] hover:bg-dark hover:text-green" href={link.href}>{link.label}</a>))}
     </nav>
 

@@ -36,7 +36,7 @@ const WorkingProcessData = [
 export function WorkingProcess(){
     return (
         <section className="flex items-center pt-[120px] flex-col ">
-                   <div className="my-container py-5 flex flex-nowrap gap-10  ">
+                   <div className="my-container py-5 flex flex-wrap lg:flex-nowrap  gap-10  ">
                         <h2 className="text-[40px] mark font-medium">Our Working Process </h2>
                         <p className="text-lg max-w-[292px] ">Step-by-Step Guide to Achieving Your Business Goals</p>
                     </div>

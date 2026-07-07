@@ -9,7 +9,7 @@ const CardServicesWrap = (
     }
 
 ) => {
-    const cardClasses = 'group rounded-[45px] border border-solid border-dark grid grid-cols-2 gap-[77px]  min-h-[310px] max-w-[608px] w-full shadow-[0_5px_0_0_#000000]';
+    const cardClasses = 'group rounded-[45px] border border-solid border-dark grid sm:grid-cols-2 gap-[77px]  min-h-[310px] max-w-[608px] w-full shadow-[0_5px_0_0_#000000]';
 
     const sizeCard = {
         sm: '',

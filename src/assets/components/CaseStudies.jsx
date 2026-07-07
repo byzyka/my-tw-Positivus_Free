@@ -20,6 +20,7 @@ const caseStudiesData = [
 export function CaseStudies() {
   return (
     caseStudiesData.map((item) => ( 
+      
       <div key={item.id} className="  flex flex-wrap space-y-5 pr-[64px] ">
       <div className="text-background text-lg"> {item.text}</div>
       <a className=" inline-flex flex-nowrap gap-4 items-center group mb-5" href={item.link}>

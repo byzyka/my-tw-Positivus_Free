@@ -18,17 +18,72 @@
     --color-accent: #F3F3F3;
     --color-green: #B9FF66;
     --color-foregruund: #fff;
-    --radius-button: 0.875rem;
-    --radius-card: 45px;
+    --breakpoint-mob: 320px;
+   --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;   /* ← ОБЯЗАТЕЛЬНО */
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --breakpoint-wrapper: 1240px;
   }
   :root {
   --font-ag: 'AG Futura', sans-serif;
 }
+
 }
 
 @layer base {
 /*  Слой для сброса стилей (Reset/Normalize) и задания базовых правил для стандартных HTML-тегов */
 
+.swiper-wrapper {
+  max-width: 1240px;
+}
+.swiper-slide{
+  width: 100% !important; /* mobile first */
+}
+
+@media (min-width: 768px) {
+  .swiper-slide{
+    width: 606px !important;
+  }
+}
+
+.actions {
+  @apply flex justify-between items-center
+  relative min-h-[23px]  md:max-w-[670px] mob:max-w-[280px] w-full mx-auto  
+}
+.actions > button {
+  @apply cursor-pointer md:w-[23px] md:h-[23px] mob:w-[15px]  mob:h-[15px] flex items-center justify-center
+}
+.actions > button {
+  @apply opacity-100 bg-transparent
+}
+.actions > button.disabled{
+   @apply opacity-50 grayscale 
+}
+.pagination-dot {
+  @apply relative
+}
+  .pagination-dot.active {
+   
+    transform: scale(1.2); /* Чуть больше */
+}
+
+.custom-pagination{
+@apply max-w-[150px]  flex md:gap-5 mob:gap-2.5
+}
+
+.pagination-dot.active  {
+  
+}
+.prev {
+  @apply rotate-y-180
+
+}
+/* .actions button:hover {
+  @apply opacity-50 grayscale 
+} */
 
 
   /* Расширяем базовый сброс для всех элементов */
@@ -103,12 +158,46 @@
 
 @layer components {
 /* кнопки, повторяющиеся элементы */
+
+
 }
 
  @layer utilities {
+
 .my-container{
-  @apply w-full max-w-[1240px] mx-auto 
+  @apply  w-full max-w-[1240px] mx-auto mob:px-2.5 xl:px-0;
 };
+.speechBubble {
+  @apply relative inline-block
+}
+.speechBubble::before { 
+   content: "";
+  @apply absolute;
+  position: absolute;
+  bottom: 0;
+  left: 31%;
+  border-style: solid;
+  border-width: 17px 0 0 50px;
+  border-color: #b9ff66 transparent transparent;
+  translate: -50% 100%;
+  transform: skew(-56deg);
+  transform-origin: top;
+}
+
+.speechBubble::after {
+  content: "";
+  @apply absolute;
+  bottom: 0;
+  left: 31%;
+  border-style: solid;
+  border-width: 15.6px 0 0 45.9px;
+  border-color: #191a23 transparent transparent;
+  translate: calc(-50% + 1.1px) 100%;
+  transform: skew(-56deg);
+  transform-origin: top;
+}
+
+
 
 /* Слой для ваших собственных утилитарных (однозадачных) классов, которых нет в Tailwind из коробки. Утилиты имеют самый высокий приоритет и перекрывают стили из base и components. */
 .mark {
