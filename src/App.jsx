@@ -6,12 +6,13 @@ import Services from './assets/sections/Services.jsx'
 import Happen from'./assets/sections/Happen.jsx'
 import Case from'./assets/sections/Cases.jsx'
 import WorkingProcess from './assets/sections/WorkingProcess.jsx'
-import './App.css'
 import Team from './assets/sections/Team.jsx'
 import Testimonials from './assets/sections/Testimonials.jsx'
+import Contact from './assets/sections/Contact.jsx'
+import Footer from './assets/sections/Footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
@@ -26,7 +27,9 @@ function App() {
         <WorkingProcess/>
         <Team/>
         <Testimonials/>
+        <Contact/>
       </main>
+      <Footer/>
     </div>
     
     </>

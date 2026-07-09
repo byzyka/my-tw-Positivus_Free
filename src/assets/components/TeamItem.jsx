@@ -1,4 +1,4 @@
-import Linkedin from '../img/linkedin.svg'
+import Linkedin from "../components/Linkedin.jsx";
 
 
 export function TeamItem({ name, post, img, experience }) {
@@ -34,9 +34,8 @@ export function TeamItem({ name, post, img, experience }) {
                         <p className='sm:text-xl mob:text-[16px] font-medium'>{name}</p>
                         <p className='sm:text-lg mob:text-[14px]  font-space'>{post}</p>
                     </div>
-                    <div className="absolute right-0 top-0 w-[34px] h-[34px] bg-dark rounded-full flex items-center justify-center ">
-                        <img className='' src={Linkedin} alt="Linkedin" />
-                    </div>  
+                        <Linkedin className="absolute right-0 top-0 " size={34} hoverBg="#898989" colorBg="#000" color="#B9FF66"/>
+                    
                 </div>
             
 

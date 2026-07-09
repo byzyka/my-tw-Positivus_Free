@@ -24,9 +24,12 @@ const navLinks = [
     
 ];
 
-export function MenuNav() {
+export function MenuNav( {className = '' }) {
+
+    const LinkTextStyle = 'p-5 text-xl leading-7 text-primary rounded-[0.875rem] hover:bg-dark hover:text-green'
+
     return <nav className="hidden lg:flex items-center gap-5  ">
-        {navLinks.map((link, index)=> (<a key={link.href} className="p-5 text-xl leading-7 text-primary rounded-[0.875rem] hover:bg-dark hover:text-green" href={link.href}>{link.label}</a>))}
+        {navLinks.map((link, index)=> (<a key={link.href} className={`${LinkTextStyle} ${className}`}  href={link.href}>{link.label}</a>))}
     </nav>
 
 }

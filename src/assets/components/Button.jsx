@@ -15,7 +15,7 @@ const Button = (
         ...props
     }
 ) => {
-    const baseClasses =' flex px-8.5 py-5 text-xl leading-7 border border-dark border-solid backdrop-blur rounded-[0.875rem] hover:bg-dark hover:text-green focus:outline-none';
+    const baseClasses =' flex md:px-8.5 md:py-5 mob:py-2 mob:px-2  text-xl leading-7 border border-dark border-solid backdrop-blur rounded-[0.875rem] hover:bg-dark hover:text-green focus:outline-none';
 
     // const sizeClasses = {
     //     sm: 'px-6 text-lg',

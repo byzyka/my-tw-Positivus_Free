@@ -18,6 +18,7 @@
     --color-accent: #F3F3F3;
     --color-green: #B9FF66;
     --color-foregruund: #fff;
+    --color-gray: #898989;
     --breakpoint-mob: 320px;
    --breakpoint-sm: 640px;
   --breakpoint-md: 768px;   /* ← ОБЯЗАТЕЛЬНО */
@@ -69,9 +70,21 @@
    
     transform: scale(1.2); /* Чуть больше */
 }
+.form-group {
+  @apply  flex flex-col gap-1.5
+}
+.form-group input, textarea {
+ @apply w-full rounded-[14px] bg-white border py-4.5 px-8.5 placeholder:text-gray outline-none shadow-none
+}
+.form-group textarea {
+  @apply resize-none min-h-47.5
+}
+.form-group.dark input {
+@apply bg-transparent border-white placeholder:text-white py-5.5 pl-8.5 pr-0.5 text-xl  h-[67px] text-white
+}
 
 .custom-pagination{
-@apply max-w-[150px]  flex md:gap-5 mob:gap-2.5
+@apply max-w-[150px]  flex md:gap-5 mob:gap-2.5 
 }
 
 .pagination-dot.active  {
@@ -81,6 +94,11 @@
   @apply rotate-y-180
 
 }
+
+.socialLogo:hover {
+
+}
+
 /* .actions button:hover {
   @apply opacity-50 grayscale 
 } */
